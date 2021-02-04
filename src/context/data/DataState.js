@@ -33,6 +33,11 @@ const GithubState = (props) => {
 		}
 	};
 
+	// Filter data
+	const filterData = (text) => {
+		dispatch({ type: FILTER_DATA, payload: text });
+	};
+
 	// Clear errors
 	const clearError = () => dispatch({ type: CLEAR_ERROR });
 
@@ -48,6 +53,7 @@ const GithubState = (props) => {
 				error: state.error,
 				getData,
 				clearError,
+				filterData,
 			}}
 		>
 			{props.children}

@@ -10,6 +10,15 @@ export default (state, action) => {
 				error: null,
 			};
 
+		case FILTER_DATA:
+			return {
+				...state,
+				filtered: state.data.filter((d) => {
+					let regex = new RegExp(`${action.payload}`, 'gi');
+					return d.FirstName.match(regex) || d.LastName.match(regex) || d.CreditCardType.match(regex);
+				}),
+			};
+
 		case SET_LOADING:
 			return {
 				...state,
