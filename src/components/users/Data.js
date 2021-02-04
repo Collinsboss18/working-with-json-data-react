@@ -34,7 +34,11 @@ const Data = () => {
 							<th>MacAddress</th>
 						</tr>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+						{filtered !== null
+							? filtered.map((dt) => <DataItem key={dt.MacAddress} data={dt} />)
+							: data.map((dt) => <DataItem key={dt.MacAddress} data={dt} />)}
+					</tbody>
 				</table>
 			</div>
 		);
