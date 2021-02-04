@@ -13,7 +13,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			{/* <Navbar /> */}
+			<Navbar />
 			<br />
 			<Data />
 		</Fragment>
