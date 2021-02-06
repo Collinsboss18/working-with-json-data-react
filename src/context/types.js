@@ -6,3 +6,5 @@ export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const ERROR = 'ERROR';
 export const CLEAR_ERROR = 'CLEAR_ERROR';
+export const FILTER_GENDER = 'FILTER_GENDER';
+export const FILTER_METHOD = 'FILTER_METHOD';

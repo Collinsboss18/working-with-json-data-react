@@ -1,12 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import DataItem from './DataItem';
 import Spinner from '../layout/Spinner';
 import DataContext from '../../context/data/dataContext';
+import $ from 'jquery';
 
 const Data = () => {
 	const dataContext = useContext(DataContext);
 	const { data, loading, filtered } = dataContext;
 
+	useEffect(() => {
+		$('#table_id').DataTable();
+	});
 	// debugger;
 
 	if (loading) {
@@ -14,7 +18,7 @@ const Data = () => {
 	} else {
 		return (
 			<div className={'container'} style={{ overflowX: 'auto' }}>
-				<table className={'responsive-table'}>
+				<table className={'display responsive-table'} id="table_id">
 					<thead>
 						<tr>
 							<th>FirstName</th>

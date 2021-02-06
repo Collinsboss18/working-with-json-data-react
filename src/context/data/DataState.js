@@ -3,7 +3,7 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import DataContext from './dataContext';
 import DataReducer from './dataReducer';
-import { CLEAR_DATA, FILTER_DATA, SET_LOADING, GET_DATA, ERROR, CLEAR_ERROR } from '../types';
+import { FILTER_METHOD, FILTER_DATA, SET_LOADING, GET_DATA, ERROR, CLEAR_ERROR, FILTER_GENDER } from '../types';
 
 const GithubState = (props) => {
 	const initialState = {
@@ -38,6 +38,16 @@ const GithubState = (props) => {
 		dispatch({ type: FILTER_DATA, payload: text });
 	};
 
+	// Filter gender
+	const filterGender = (gender) => {
+		dispatch({ type: FILTER_GENDER, payload: gender });
+	};
+
+	// Filter by payment method
+	const filterPaymentMethod = (method) => {
+		dispatch({ type: FILTER_METHOD, payload: method });
+	};
+
 	// Clear errors
 	const clearError = () => dispatch({ type: CLEAR_ERROR });
 
@@ -54,6 +64,8 @@ const GithubState = (props) => {
 				getData,
 				clearError,
 				filterData,
+				filterGender,
+				filterPaymentMethod,
 			}}
 		>
 			{props.children}

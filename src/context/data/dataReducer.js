@@ -1,4 +1,4 @@
-import { CLEAR_DATA, FILTER_DATA, SET_LOADING, GET_DATA, ERROR, CLEAR_ERROR } from '../types';
+import { FILTER_METHOD, FILTER_DATA, SET_LOADING, GET_DATA, ERROR, CLEAR_ERROR, FILTER_GENDER } from '../types';
 
 export default (state, action) => {
 	switch (action.type) {
@@ -14,8 +14,29 @@ export default (state, action) => {
 			return {
 				...state,
 				filtered: state.data.filter((d) => {
-					let regex = new RegExp(`${action.payload}`, 'gi');
+					let regex = new RegExp(`${action.payload}`, 'i');
 					return d.FirstName.match(regex) || d.LastName.match(regex) || d.CreditCardType.match(regex);
+				}),
+			};
+
+		case FILTER_GENDER:
+			return {
+				...state,
+				filtered:
+					action.payload === 'All'
+						? state.data
+						: state.data.filter((d) => {
+								let regex = new RegExp(`${action.payload}`, 'gi');
+								return d.Gender.match(regex);
+						  }),
+			};
+
+		case FILTER_METHOD:
+			return {
+				...state,
+				filtered: state.data.filter((d) => {
+					let regex = new RegExp(`${action.payload}`, 'gi');
+					return d.PaymentMethod.match(regex);
 				}),
 			};
 

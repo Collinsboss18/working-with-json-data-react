@@ -8,6 +8,8 @@
 		"@testing-library/react": "^11.2.5",
 		"@testing-library/user-event": "^12.6.3",
 		"axios": "^0.21.1",
+		"datatables.net": "^1.10.23",
+		"datatables.net-dt": "^1.10.23",
 		"font-awesome": "^4.7.0",
 		"materialize-css": "^1.0.0",
 		"react": "^17.0.1",
