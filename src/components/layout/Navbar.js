@@ -1,9 +1,9 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useRef } from 'react';
 import DataContext from '../../context/data/dataContext';
 
 const Navbar = () => {
 	const dataContext = useContext(DataContext);
-	const { getData, filterData, clearData } = dataContext;
+	const { filterData } = dataContext;
 	const text = useRef('');
 
 	const onChange = (e) => {
