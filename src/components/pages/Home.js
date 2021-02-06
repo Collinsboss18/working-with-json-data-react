@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from '../layout/Navbar';
 import Data from '../data/Data';
 import Filter from '../filter/Filter';
@@ -17,13 +17,13 @@ const Home = () => {
 	}, []);
 
 	return (
-		<Fragment>
+		<div>
 			<Navbar />
 			<br />
 			<Filter />
 			<br />
 			<Data />
-		</Fragment>
+		</div>
 	);
 };
 export default Home;

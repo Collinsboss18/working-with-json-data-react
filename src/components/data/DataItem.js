@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const DataItem = ({
@@ -21,25 +21,23 @@ const DataItem = ({
 	},
 }) => {
 	return (
-		<Fragment>
-			<tr>
-				<td>{FirstName}</td>
-				<td>{LastName}</td>
-				<td>{UserName}</td>
-				<td>{Email}</td>
-				<td>{Gender}</td>
-				<td>{PaymentMethod}</td>
-				<td>{CreditCardNumber}</td>
-				<td>{PhoneNumber}</td>
-				<td>{URL}</td>
-				<td>{LastLogin}</td>
-				<td>{CreditCardType}</td>
-				<td>{DomainName}</td>
-				<td>{Latitude}</td>
-				<td>{Longitude}</td>
-				<td>{MacAddress}</td>
-			</tr>
-		</Fragment>
+		<tr>
+			<td>{FirstName}</td>
+			<td>{LastName}</td>
+			<td>{UserName}</td>
+			<td>{Email}</td>
+			<td>{Gender}</td>
+			<td>{PaymentMethod}</td>
+			<td>{CreditCardNumber}</td>
+			<td>{PhoneNumber}</td>
+			<td>{URL}</td>
+			<td>{LastLogin}</td>
+			<td>{CreditCardType}</td>
+			<td>{DomainName}</td>
+			<td>{Latitude}</td>
+			<td>{Longitude}</td>
+			<td>{MacAddress}</td>
+		</tr>
 	);
 };
 
