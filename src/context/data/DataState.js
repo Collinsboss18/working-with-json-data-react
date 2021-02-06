@@ -21,6 +21,7 @@ const GithubState = (props) => {
 		try {
 			setLoading();
 			const res = await axios.get(`https://api.enye.tech/v1/challenge/records`);
+			console.log(res.data);
 			res.status === 200
 				? dispatch({
 						type: GET_DATA,

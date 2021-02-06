@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
-import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import DataState from './context/data/DataState';
 
@@ -22,7 +21,6 @@ const App = () => {
 				<div className="App">
 					<div className={''}>
 						<Switch>
-							<Route exact path={'/about'} component={About} />
 							<Route exact path={'/'} component={Home} />
 							<Route component={NotFound} />
 						</Switch>
